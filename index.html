@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finanzas Quant</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <title>Finanzas Quant</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
+
 <body>
   <div class="overlay"></div>
   <!-- Header -->
@@ -17,18 +21,21 @@
     <nav class="nav">
       <ul class="menu">
         <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#about">Acerca de</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#">Cotizaciones &#8594;</a></li>
       </ul>
     </nav>
     <ul class="burger-menu">
-        <li><h1>Logo</h1></li>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca</a></li>
-        <li><a href="#">Contacto</a></li>
+      <li>
+        <h1>Logo</h1>
+      </li>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="#">Contacto</a></li>
     </ul>
     <div class="menu-icon">
-      <img src="img/menu_icon.svg" alt="Menu" height="35px" width="35px">
+      <img src="icons/menu_icon.svg" alt="Menu" height="35px" width="35px">
     </div>
   </header>
   <!-- /Header -->
@@ -38,25 +45,156 @@
       <div class="banner">
         <div class="title-banner">
           <h1>FINANZAS QUANT</h1>
-          <h2>Asesoramiento financiero</h2>
+          <h2> Asesoramiento financiero </h2>
         </div>
       </div>
     </section>
-    <div class="content">
+    <div id="about"></div>
+    <div class="content-main">
+      <section class="about" id="about">
+        <div class="content-section">
+          <div class="text-section">
+            <h3>Por qué Elegirnos</h3>
+            <p>
+              Nos enfocamos en la precisión y la eficacia en nuestras estrategias cuantitativas. Además, ofrecemos un
+              servicio personalizado y un compromiso continuo con la excelencia para satisfacer las necesidades y
+              objetivos
+              financieros individuales de cada cliente. Destacamos las razones principales por la cual los clientes
+              deberían elegir nuestros servicios de finanzas. Maximiza ganancias y minimiza riesgos. Somos tu camino
+              inteligente hacia el éxito financiero.
+            </p>
+          </div>
+        </div>
+      </section>
       <!-- Contenido adicional debajo de la imagen -->
-      <h1>Título de la sección</h1>
-      <p>Contenido de la sección</p>
-      <div class="text-banner">
-        <p>Maximiza ganancias y minimiza riesgos. Somos tu camino inteligente hacia el éxito financiero.</p>
-      </div>
+      <section class="section">
+        <div class="content-section" id="main_1">
+          <div class="text-section">
+            <h3>Beneficios de las Finanzas Quant</h3>
+            <p>
+              Las finanzas cuantitativas son herramientas que permiten analizar datos financieros de manera rigurosa y
+              objetiva mediante modelos matemáticos y algoritmos avanzados. Estas técnicas identifican patrones y
+              tendencias en los mercados, ayudando a tomar decisiones informadas y oportunas, optimizar carteras de
+              inversión, maximizar rendimientos y minimizar riesgos. La metodología se basa en un enfoque científico
+              probado, garantizando resultados consistentes en diversas condiciones del mercado, lo que las convierte en
+              esenciales para el éxito financiero sostenible y duradero de los clientes.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="content-section" id="main_2">
+          <div class="text-section">
+            <h3>Requerimientos en Finanzas Quant</h3>
+            <p>Para aprovechar al máximo los servicios de finanzas cuantitativas, se requiere una sólida comprensión de
+              conceptos financieros básicos, así como habilidades en matemáticas y estadística. Es crucial tener
+              conocimientos en programación y manejo de datos para poder trabajar con modelos y algoritmos
+              cuantitativos.
+              Además, se necesita capacidad analítica y de resolución de problemas para interpretar los resultados y
+              tomar
+              decisiones informadas. La capacidad de trabajar en equipo y comunicar ideas complejas de manera clara
+              también
+              es fundamental en este campo. En resumen, una combinación de conocimientos técnicos, habilidades
+              analíticas y
+              competencias interpersonales son esenciales para aprovechar al máximo los beneficios de las finanzas
+              cuantitativas.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="content-section" id="main_3">
+          <div class="text-section">
+            <h3>Filosofía de Inversión Quant</h3>
+            <p>
+              En nuestra empresa, compartimos nuestra visión y metodología en la inversión cuantitativa, destacando cómo
+              se
+              distingue nuestra oferta de servicios. Nos enfocamos en utilizar modelos y análisis de datos avanzados
+              para
+              tomar decisiones de inversión fundamentadas y precisas. Nuestro enfoque se centra en la innovación, la
+              transparencia y el rendimiento consistente para ofrecer un valor añadido a nuestros clientes.</p>
+          </div>
+        </div>
+      </section>
+      <div id="contact"></div>
+      <section class="contact">
+        <div class="form">
+          <h1>Formulario de Contacto</h1>
+          <form action="#" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" class="form-control" required>            
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellido:</label>
+              <input type="text" id="apellido" name="apellido" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono:</label>
+              <input type="tel" id="telefono" name="telefono" class="form-control" required>  
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="foto_perfil" class="form-label">Foto de Perfil (jpg, png, etc.):</label>
+              <input type="file" id="foto_perfil" name="foto_perfil" class="form-control" accept="image/jpeg, image/png">      
+            </div>
+            <div class="d-grid gap-2">
+              <input type="submit" class="btn btn-primary block" value="Enviar">
+            </div>
+          </form>
+        </div>
+        <div class="img_contact">
+          <img src="img/contact.webp">
+        </div>
+      </section>
     </div>
   </main>
   <!-- /Main -->
   <!-- Footer -->
-
+  <footer class="footer">
+    <div class="content_footer">
+      <div class="text_footer">
+        <p>
+          Asistimos a propietarios de empresas privadas. Nos enfocamos en: flexibilidad, confidencialidad, evitar
+          conflictos de intereses, hacer el mejor trato posible y una relación a largo plazo (posterior al trato) con
+          cada
+          cliente.
+        </p>
+      </div>
+      <div class="contact_footer">
+        <h4>Infomaci&oacute;n de contacto</h4>
+        <p>Telefono: <a href="tel:+555555555">+555 555555</a></p>
+        <p>Email: <a href="mailto:finanzasquant@gmail.com">finanzasquant@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Todos los derechos reservados &copy; 2024 | Finanzas Quant</p>
+    </div>
+  </footer>
   <!-- /Footer -->
 
   <!-- Scripts -->
   <script type="text/javascript" src="script.js"></script>
+  <!-- Bootstrap JS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </body>
+
 </html>
+
+<h3>Nuestras redes</h3>
+<div class="content_redes">
+  <a href="#">
+    <img src="icons/face_icon.svg" alt="Menu" height="35px" width="35px">
+  </a>
+  <a href="#">
+    <img src="icons/insta_icon.svg" alt="Menu" height="35px" width="35px">
+  </a>
+  <a href="#">
+    <img src="icons/wsp_icon.svg" alt="Menu" height="35px" width="35px">
+  </a>
+  <a href="#">
+    <img src="icons/youtube_icon.svg" alt="Menu" height="35px" width="35px">
+  </a>
+</div>

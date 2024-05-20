@@ -26,9 +26,3 @@ window.addEventListener("scroll", () => {
   var header = document.querySelector("header");
   header.classList.toggle("down",window.scrollY>0);
 });
-
-/*
-window.onload = function() {
-  window.scrollTo(0, 0);
-};
-*/
