@@ -270,43 +270,40 @@ nav .menu li:last-child {
 
 .image-container .title-banner h1 {
   font-family: "adobe_myungjo";
-  background-color: #515f6980;
+  background-color: #515f69d8;
   font-size: 5em;
   padding: 10px;
 }
 
 .image-container .title-banner h2 {
   font-family: "adobe_myungjo";
-  background-color: #515f6980;
+  background-color: #515f69d8;
   font-size: 2em;
   letter-spacing: 2px;
   padding: 10px;
 }
 
 .main .content-main {
-  padding: 20px 100px;
+  padding: 0 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .main .content-main .about {
-  margin: 30px 0;
-  max-width: 1150px;
+  margin: 80px 0;
 }
 
 .main .content-main .section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
   height: 100%;
-  background-color: #515f69;
-  border-radius: 10px;
-  border: 2px solid #212529;
   color: var(--color-white);
-  margin: 30px 0;
-  max-width: 1150px;
 }
 
 .main .content-main .section .content-section {
@@ -317,7 +314,20 @@ nav .menu li:last-child {
   align-items: center;
 }
 
+.main .content-main .section .content-section .text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 50px;
+  width: 70%;
+  background-color: #515f69d8;
+  margin: 0;
+  padding: 50px;
+}
+
 #main_1 {
+  justify-content: flex-start;
   background-image: url('img/main_1.webp');
   background-size: cover;
   background-position: center;
@@ -335,23 +345,12 @@ nav .menu li:last-child {
 }
 
 #main_3 {
+  justify-content: flex-start;
   background-image: url('img/main_3.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 8px;
-}
-
-.main .content-main .section .content-section .text-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 50px;
-  width: 70%;
-  background-color: #515f6980;
-  margin: 0;
-  padding: 50px;
 }
 
 .main .content-main .section .content-section .text-section h3 {
@@ -362,26 +361,13 @@ nav .menu li:last-child {
   padding: 10px;
 }
 
-.main .content-main .section .content-section .img-section {
-  width: 40%;
-}
-
-.main .content-main .section .content-section .img-section img {
-  height: 100%;
-  width: 100%;
-  border-radius: 8px;
-  max-width: 100%;
-  object-fit: cover;
-  border: 2px solid #212529;
-}
-
 /* Estilos para el Form de contacto */
 .contact {
   display: flex;
   flex-wrap: wrap;
   height: auto;
   width: 100%;
-  margin: 100px 0 50px 0;
+  margin: 80px 0;
   font-family: 'roboto_regular' !important;
 }
 
@@ -535,11 +521,10 @@ nav .menu li:last-child {
   }
 
   .main .content-main {
-    padding: 20px 50px;
+    padding: 0 50px;
   }
 
   .main .content-main .section .content-section {
-    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     background-image: url('img/banner.webp');
@@ -550,14 +535,10 @@ nav .menu li:last-child {
   }
 
   .main .content-main .section .content-section .text-section {
-    width: 70%;
-    background-color: #515f6980;
+    width: 90%;
+    background-color: #515f69d8;
     margin: 0;
-    padding: 50px;
-  }
-
-  .main .content-main .section .content-section .img-section img {
-    display: none;
+    padding: 20px;
   }
 
   .contact {
@@ -619,6 +600,10 @@ nav .menu li:last-child {
 
   .image-container .title-banner {
     font-size: 0.6em !important;
+  }
+
+  .main .content-main {
+    padding: 0 20px;
   }
 
   .footer .content_footer {
