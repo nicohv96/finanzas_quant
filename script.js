@@ -1,6 +1,8 @@
+const header = document.querySelector(".header");
 const menuIcon = document.querySelector('.menu-icon');
 const burgerMenu = document.querySelector('.burger-menu');
 const overlay = document.querySelector('.overlay');
+const topButton = document.querySelector('.top-button');
 
 menuIcon.addEventListener('click', () => {
   burgerMenu.classList.toggle('active');
@@ -23,6 +25,6 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener("scroll", () => {
-  var header = document.querySelector("header");
   header.classList.toggle("down",window.scrollY>0);
+  topButton.classList.toggle("show",window.scrollY>0);
 });
