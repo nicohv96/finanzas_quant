@@ -87,7 +87,7 @@ function crearWidgetTechnicalAnalysis(symbol) {
     script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js';
     script.innerHTML = JSON.stringify({
         "height": "400",
-        "width": "60%",
+        "width": "100%",
         "symbol": symbol,
         "interval": "1m",
         "showIntervalTabs": true,
@@ -198,9 +198,9 @@ function crearWidgetsStatics() {
     const widgetsContainer = document.getElementById('tradingview-widgets-statics');
     widgetsContainer.innerHTML = '';
 
-    widgetsContainer.appendChild(crearWidgetTopStories());
     widgetsContainer.appendChild(crearWidgetStockHeatmap());
     widgetsContainer.appendChild(crearWidgetStockHeatmapCrypto());
+    widgetsContainer.appendChild(crearWidgetTopStories());
 }
 
 //Noticas destacadas

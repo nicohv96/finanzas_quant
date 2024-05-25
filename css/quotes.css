@@ -43,3 +43,9 @@
     gap: 5px;
     padding: 30px;
 }
+
+@media (max-width: 1000px) {
+    .main .content-main {
+        padding: 0 10px;
+    }
+}
