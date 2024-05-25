@@ -6,20 +6,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
-}
-
-#tradingview-widgets {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 30px;
-    flex-direction: column;
 }
 
-#tradingview-widgets-statics {
+#tradingview-widgets, #tradingview-widgets-statics {
     height: auto;
     width: 100%;
     display: flex;

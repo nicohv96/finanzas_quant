@@ -50,6 +50,7 @@ function crearWidgetSymbolInfo(symbol) {
 function crearWidgetSymbolProfile(symbol) {
     const container = document.createElement('div');
     container.className = 'tradingview-widget-container';
+    container.style.backgroundColor = '#1f232e';
 
     const widget = document.createElement('div');
     widget.className = 'tradingview-widget-container-widget';
@@ -64,7 +65,7 @@ function crearWidgetSymbolProfile(symbol) {
         "symbol": symbol,
         "locale": "es",
         "colorTheme": "dark",
-        "isTransparent": false
+        "isTransparent": true
     });
 
     container.appendChild(widget);
@@ -87,7 +88,7 @@ function crearWidgetTechnicalAnalysis(symbol) {
     script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js';
     script.innerHTML = JSON.stringify({
         "height": "400",
-        "width": "100%",
+        "width": "70%",
         "symbol": symbol,
         "interval": "1m",
         "showIntervalTabs": true,
@@ -198,6 +199,7 @@ function crearWidgetsStatics() {
     const widgetsContainer = document.getElementById('tradingview-widgets-statics');
     widgetsContainer.innerHTML = '';
 
+    widgetsContainer.appendChild(crearWidgetScreener());
     widgetsContainer.appendChild(crearWidgetStockHeatmap());
     widgetsContainer.appendChild(crearWidgetStockHeatmapCrypto());
     widgetsContainer.appendChild(crearWidgetTopStories());
@@ -293,6 +295,35 @@ function crearWidgetStockHeatmapCrypto() {
         "hasSymbolTooltip": true,
         "isMonoSize": false,
         "colorTheme": "dark",
+    });
+
+    container.appendChild(widget);
+    container.appendChild(script);
+
+    return container;
+}
+
+//Screener
+function crearWidgetScreener() {
+    const container = document.createElement('div');
+    container.className = 'tradingview-widget-container';
+
+    const widget = document.createElement('div');
+    widget.className = 'tradingview-widget-container-widget';
+
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-screener.js';
+    script.innerHTML = JSON.stringify({
+        "width": "100%",
+        "height": 550,
+        "defaultColumn": "overview",
+        "defaultScreen": "most_capitalized",
+        "market": "argentina",
+        "showToolbar": true,
+        "colorTheme": "dark",
+        "locale": "es"
     });
 
     container.appendChild(widget);

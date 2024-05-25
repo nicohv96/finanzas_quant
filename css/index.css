@@ -1,6 +1,6 @@
 #main_1 {
     justify-content: flex-start;
-    background-image: url('../img/main_7.webp');
+    background-image: url('../img/main_1.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 
 #main_2 {
     justify-content: flex-end;
-    background-image: url('../img/main_4.webp');
+    background-image: url('../img/main_2.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -91,24 +91,7 @@
 }
 
 .contact .form {
-    width: 50%;
-}
-
-.contact .img_contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: 50%;
-    border-radius: 10px;
-    transition-duration: 5s;
-}
-
-.contact .img_contact img {
-    max-width: 100%;
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
+    width: 70%;
 }
 
 /*-------------------------------preguntar-------------------------------*/
@@ -144,21 +127,7 @@
         border: none;
     }
 
-    .contact .img_contact {
-        display: none !important;
-        /* display: flex;
-      justify-content: center;
-      align-items: center;
-      height: auto;
-      width: 100%; */
-    }
-
     #main_4 {
-        justify-content: flex-start;
-        background-image: url('../img/contact.webp');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         border-radius: 8px;
         border: 2px solid #21252949;
     }
