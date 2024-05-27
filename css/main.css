@@ -58,12 +58,13 @@ a {
   font-size: 16px;
   opacity: 0;
   visibility: hidden;
+  transform: rotate(40deg);
   transition: all 0.5s ease, all 0.5s ease;
   border: var(--color-border) 0.1px solid;
 }
 
 .top-button:hover {
-  background-color: #2e343a;
+  background-color: #2a2e33;
   transform: scale(1.1);
 }
 
