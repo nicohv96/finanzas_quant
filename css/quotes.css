@@ -1,3 +1,8 @@
+body {
+    background-color: #000000 !important;
+    color: #f4f6f7 !important;
+}
+
 /*-------------------------------Estilos para los widgets-------------------------------*/
 .widgets {
     height: auto;
