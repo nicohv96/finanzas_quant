@@ -90,15 +90,10 @@
     display: flex;
     flex-wrap: wrap;
     height: auto;
-    margin: 20px 0;
+    margin: auto;
     width: 100%;
+    margin:20px 0;
     font-family: 'roboto_regular' !important;
-    gap: 50px;
-}
-
-.contact .text-contact p a {
-    text-decoration: underline !important;
-    color: #0004ff !important;
 }
 
 .contact .form {
@@ -108,7 +103,7 @@
     height: auto;
     width: 50%;
     margin: auto;
-    padding: 50px 30px;
+    padding: 30px;
     border-radius: 10px;
     border: 2px solid #21252949
 }
@@ -118,9 +113,24 @@
     margin-bottom: 20px;
 }
 
-.contact .form {
-    width: 70%;
-}
+.contact .img_contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 50%;
+    border-radius: 10px;
+    transition-duration: 5s;
+  }
+  
+  .contact .img_contact img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center ;
+  }
 
 /*-------------------------------preguntar-------------------------------*/
 .form-label {
@@ -129,6 +139,36 @@
 
 /*-------------------------------Media Queries-------------------------------*/
 @media (max-width: 1000px) {
+    #main_5 {
+        justify-content: flex-start;
+        background-image: url('../img/contact.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        border: 2px solid #21252949;
+        transition-duration: 1s;
+        
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    
+    .contact .form {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        border: none;
+    }
+    
+    .contact .img_contact {
+        display:none !important;
+    }
+
     .main .content-main {
         padding: 0 50px;
     }
