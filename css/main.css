@@ -68,6 +68,10 @@ a {
   transform: rotate(0deg) scale(1.1);
 }
 
+.top-button:active {
+  transform: scale(0.8);
+}
+
 .top-button.show {
   opacity: 1;
   visibility: visible;
