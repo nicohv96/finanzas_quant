@@ -65,8 +65,7 @@ a {
 
 .top-button:hover {
   background-color: #2a2e33;
-  transform: rotate(0deg);
-  transform: scale(1.1);
+  transform: rotate(0deg) scale(1.1);
 }
 
 .top-button.show {
