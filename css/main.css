@@ -213,6 +213,10 @@ a {
   transition: 0.4s ease;
 }
 
+.brand:hover img {
+  filter: brightness(0) saturate(100%) invert(61%) sepia(81%) saturate(336%) hue-rotate(176deg) brightness(104%) contrast(103%);
+}
+
 .brand:active {
   background-color: #b0b0b044;
   transition: 0.4s ease;
