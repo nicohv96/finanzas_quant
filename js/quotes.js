@@ -222,7 +222,7 @@ function crearWidgetTopStories() {
         "width": "100%",
         "locale": "es",
         "feedMode": "all_symbols",
-        "displayMode": "regular",
+        "displayMode": "adaptive",
         "colorTheme": "dark",
         "isTransparent": false
     });
