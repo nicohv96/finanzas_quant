@@ -212,9 +212,8 @@
     }
 
     .form-control {
-        background-color: #6b777f;
         opacity: 0.75;
-        border: solid 50px #21252949;
+        border: solid 3px #21252949;
     }
 }
 
@@ -229,13 +228,8 @@
 }
 /* --------------------------FORM VALIDATION---------------- */
 input[type="email"] {
-    -webkit-appearance: none;
-    appearance: none;
     width: 100%;
-    margin: 0;
-    font-family: inherit;
     font-size: 90%;
-    box-sizing: border-box;
 }
 input:focus:invalid {
     outline: none;
@@ -248,9 +242,6 @@ input:focus:invalid {
     font-size: 80%;
     color: #900 ;
     background-color:transparent;
-    border-radius: 0 0 5px 5px;
-    box-sizing: border-box;
-    justify-content: center;
 }
   
 .error.active {
