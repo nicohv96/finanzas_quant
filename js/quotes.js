@@ -4,13 +4,13 @@ function llenarSelect(symbols) {
     const select = document.getElementById('symbolSelect');
     symbols.forEach(symbol => {
         const option = document.createElement('option');
-        option.value = symbol.symbol;
-        option.text = symbol.name;
+        option.value = symbol.simbolo;
+        option.text = symbol.nombre;
         select.appendChild(option);
     });
 }
 
-fetch('symbols.json')
+fetch('https://finanzasquant.pythonanywhere.com/simbolos') //Cambiar por la URL de la API
     .then(response => response.json())
     .then(data => {
         llenarSelect(data);
@@ -202,10 +202,10 @@ function crearWidgetsStatics() {
     widgetsContainer.appendChild(crearWidgetScreener());
     widgetsContainer.appendChild(crearWidgetStockHeatmap());
     widgetsContainer.appendChild(crearWidgetStockHeatmapCrypto());
-    widgetsContainer.appendChild(crearWidgetTopStories());
+    //widgetsContainer.appendChild(crearWidgetTopStories());
 }
 
-//Noticas destacadas
+/*Noticas destacadas
 function crearWidgetTopStories() {
     const container = document.createElement('div');
     container.className = 'tradingview-widget-container';
@@ -232,6 +232,7 @@ function crearWidgetTopStories() {
 
     return container;
 }
+*/
 
 //Mapas de calor
 function crearWidgetStockHeatmap() {

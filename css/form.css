@@ -1,0 +1,18 @@
+::placeholder {
+    opacity: 0.8 !important;
+}
+
+.error {
+    color: #ff2020;
+}
+
+.form-control.error {
+    border: 1px solid #ff2020;
+    background-color: #ffecec;
+}
+
+.form-control.error:focus {
+    border: 1px solid #ff2020;
+    background-color: #ffecec;
+    box-shadow: none;
+}

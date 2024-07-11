@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ofrecemos asesoramiento financiero experto para ayudarte a alcanzar tus metas financieras. Desde planificación de inversiones hasta gestión de riesgos, estamos aquí para guiarte. Contáctanos hoy para una consulta personalizada.">
+    <title>Finanzas Quant - Actualizar usuario</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center vh-100">
+            <div class="col-lg-5 col-md-8 col-sm-10">
+                <div class="card shadow rounded-3">
+                    <div class="card-header p-4 bg-dark">
+                        <h3 class="mb-0 text-white text-center">Actualizar usuario</h3>
+                    </div>
+                    <div class="card-body" id="app">
+                        <form id="addForm" action="#" method="#">
+                            <div class="mb-3">
+                                <label for="id" class="form-label">ID:</label>
+                                <input type="number" class="form-control" name="id" id="id" disabled v-model="id">
+                            </div>
+                            <div class="mb-3">
+                                <label for="usuario" class="form-label">Usuario:</label>
+                                <input type="text" class="form-control" id="usuario" v-model="usuario" name="usuario"
+                                    placeholder="Ingresa el usuario" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="passw" class="form-label">Contraseña:</label>
+                                <input type="password" class="form-control" id="passw" v-model="passw" name="passw"
+                                    placeholder="Ingresa la contraseña" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="estado" class="form-label">Estado:</label>
+                                <select v-model="estado" id="estado" class="form-control">
+                                  <option :value="true">Activo</option>
+                                  <option :value="false">Inactivo</option>
+                                </select>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="users.html" class="btn btn-secondary">Volver</a>
+                                <button type="button" class="btn btn-primary" v-on:click="modificar()">Actualizar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center pt-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Bootstrap js -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Scripts personalizados -->
+    <script src="js/update_users.js"></script>
+</body>
+
+</html>

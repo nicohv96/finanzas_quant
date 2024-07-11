@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "roboto_light";
+  src: url("../fonts/roboto_light.ttf") format("truetype");
+}
+
+body {
+  font-family: "roboto_light" !important;
+}
+
+.card-header.p-4 {
+  /*-------------------------------Variables-------------------------------*/
+  --bs-card-cap-bg: #212529 !important;
+}
+
+::placeholder {
+    opacity: 0.8 !important;
+}
+
+.error {
+    color: #ff2020;
+}
+
+.form-control.error {
+    border: 1px solid #ff2020;
+    background-color: #ffecec;
+}
+
+.form-control.error:focus {
+    border: 1px solid #ff2020;
+    background-color: #ffecec;
+    box-shadow: none;
+}

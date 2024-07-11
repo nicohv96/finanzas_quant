@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ofrecemos asesoramiento financiero experto para ayudarte a alcanzar tus metas financieras. Desde planificación de inversiones hasta gestión de riesgos, estamos aquí para guiarte. Contáctanos hoy para una consulta personalizada.">
+    <title>Finanzas Quant - Administraci&oacute;n</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+	<link rel="stylesheet" type="text/css" href="css/symbols.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid" id="nav">
+            <a href="#home" class="brand">
+                <img src="img/logo_fq.svg" alt="Logo" height="60px" width="300px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="symbols.html">Simbolos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" id="logoutBtn">Cerrar Sesión</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Título -->
+    <div class="container mt-5 d-flex justify-content-between">
+        <h1 class="">Usuarios</h1>
+        <a href="add_user.html" class="btn btn-success d-flex justify-content-center align-items-center">Agregar</a>
+    </div>
+
+    <!-- Tabla -->
+    <div id="app" class="container mt-4">
+        <div v-if="error">
+            <p>Lo sentimos, error al cargar la API</p>
+        </div>
+        <div v-else>
+            <section v-if="cargando">
+                <div class="spinner-border"></div>
+            </section>
+            <section v-else>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>#</th>
+                                <th>Usuario</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr class="" v-for="usuario in usuarios">
+                                <td scope="row">{{usuario.id}}</td>
+                                <td>{{usuario.usuario}}</td>
+                                <td>{{ usuario.estado ? 'Activo' : 'Inactivo' }}</td>
+                                <td class="d-flex justify-content-around align-items-center">
+                                    <a class="btn btn-primary" :href="'update_user.html?id='+ usuario.id">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                            <path fill-rule="evenodd"
+                                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                                        </svg>
+                                    </a>
+                                    <button type="button" class="btn btn-danger" v-on:click="eliminar(usuario.id)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                                            <path
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+        
+    </div>
+
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Scripts -->
+    <script src="js/users.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

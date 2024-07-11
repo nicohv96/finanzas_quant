@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "roboto_light";
+  src: url("../fonts/roboto_light.ttf") format("truetype");
+}
+
+#nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #21252900;
+  padding: 0 50px;
+  font-family: "roboto_light";
+  font-size: 20px !important;
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .brand img {
+    height: 50px;
+    width: 170px;
+  }
+}
