@@ -55,7 +55,7 @@ This project simulates the **main website of a financial company**, designed to 
 
 ## 🌍 Live Demo  
 
-👉 [Visit Finanzas Quant](#) *(replace with your deployed link)*  
+👉 [Visit Finanzas Quant](#) *(https://nicohv96.github.io/finanzas_quant/)*  
 
 ---
 
